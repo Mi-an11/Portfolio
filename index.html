@@ -77,52 +77,61 @@
 
 <body class="overflow-x-hidden">
 
-    <!-- Navigation: Fixed to edges with inset-x-0 -->
-<nav class="fixed top-0 inset-x-0 z-[100] flex justify-between items-center px-6 md:px-10 py-5 bg-white/5 backdrop-blur-lg border-b border-white/5 mix-blend-difference text-zinc-200">
-    <div class="text-xl font-bold tracking-tighter">DULALIA</div>
+    <!-- Navigation: Glass background with Auto-Inverting Text -->
+    <nav
+        class="fixed top-0 w-full z-[100] flex justify-between items-center px-6 md:px-10 py-5 bg-white/5 backdrop-blur-lg border-b border-white/5 mix-blend-difference text-zinc-200">
+        <div class="text-xl font-bold tracking-tighter">DULALIA</div>
 
-    <!-- Desktop Links -->
-    <div class="hidden lg:flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
-        <a href="#about" class="hover:opacity-50 transition">About</a>
-        <a href="#projects" class="hover:opacity-50 transition">Projects</a>
-        <a href="#skills" class="hover:opacity-50 transition">Skills</a>
-        <a href="#education" class="hover:opacity-50 transition">Education</a>
-        <a href="#contact" class="hover:opacity-50 transition">Contact</a>
-    </div>
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="#about" class="hover:opacity-50 transition">About</a>
+            <a href="#projects" class="hover:opacity-50 transition">Projects</a>
+            <a href="#skills" class="hover:opacity-50 transition">Skills</a>
+            <a href="#education" class="hover:opacity-50 transition">Education</a>
+            <a href="#contact" class="hover:opacity-50 transition">Contact</a>
+        </div>
 
-    <!-- Mobile Toggle -->
-    <div class="flex items-center">
-        <button id="menu-toggle" class="lg:hidden block p-2">
-            <i data-lucide="menu" class="w-6 h-6 cursor-pointer"></i>
+        <div class="flex items-center gap-6">
+
+            <!-- Hamburger only visible on mobile/tablet -->
+            <button id="menu-toggle" class="lg:hidden block">
+                <i data-lucide="menu" class="w-6 h-6 cursor-pointer"></i>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Full Screen Mobile Menu Overlay -->
+    <!-- Full Screen Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-[150] flex flex-col items-center justify-center gap-10 text-xl font-bold uppercase tracking-[0.3em] lg:hidden">
+        <!-- Close Button -->
+        <button onclick="toggleMenu()" class="absolute top-6 right-6">
+            <i data-lucide="x" class="w-8 h-8 text-black"></i>
         </button>
+
+        <!-- Links -->
+        <a href="#about" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">About</a>
+        <a href="#projects" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Projects</a>
+        <a href="#skills" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Skills</a>
+        <a href="#education" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Education</a>
+        <a href="#contact" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Contact</a>
     </div>
-</nav>
 
-<!-- Full Screen Mobile Menu Overlay -->
-<div id="mobile-menu" class="fixed inset-0 bg-white z-[150] flex flex-col items-center justify-center gap-10 text-xl font-bold uppercase tracking-[0.3em] lg:hidden">
-    <!-- Close Button -->
-    <button onclick="toggleMenu()" class="absolute top-6 right-6 p-2">
-        <i data-lucide="x" class="w-8 h-8 text-black"></i>
-    </button>
-
-    <!-- Links -->
-    <a href="#about" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">About</a>
-    <a href="#projects" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Projects</a>
-    <a href="#skills" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Skills</a>
-    <a href="#education" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Education</a>
-    <a href="#contact" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Contact</a>
-
-    <!-- Socials moved INSIDE the mobile menu so they don't cause overflow on the main page -->
+    <!-- Socials -->
     <div class="flex gap-8 mt-10 text-gray-400">
-        <i data-lucide="mail" class="w-6 h-6"></i>
-        <i data-lucide="instagram" class="w-6 h-6"></i>
-        <i data-lucide="facebook" class="w-6 h-6"></i>
+        <i data-lucide="mail" class="w-5 h-5"></i>
+        <i data-lucide="instagram" class="w-5 h-5"></i>
+        <i data-lucide="facebook" class="w-5 h-5"></i>
     </div>
-</div>
+    </div>
 
-<!-- The HERO SECTION starts immediately here -->
-<section class="min-h-screen pt-32 pb-14 px-6 md:px-10 flex items-center" id="about">
 
+
+
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen pt-30 pb-14 px-6 md:px-10 flex items-center" id="about">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
 
             <!-- LEFT CONTENT -->
