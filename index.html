@@ -77,61 +77,52 @@
 
 <body class="overflow-x-hidden">
 
-    <!-- Navigation: Glass background with Auto-Inverting Text -->
-    <nav
-        class="fixed top-0 w-full z-[100] flex justify-between items-center px-6 md:px-10 py-5 bg-white/5 backdrop-blur-lg border-b border-white/5 mix-blend-difference text-zinc-200">
-        <div class="text-xl font-bold tracking-tighter">DULALIA</div>
+    <!-- Navigation: Fixed to edges with inset-x-0 -->
+<nav class="fixed top-0 inset-x-0 z-[100] flex justify-between items-center px-6 md:px-10 py-5 bg-white/5 backdrop-blur-lg border-b border-white/5 mix-blend-difference text-zinc-200">
+    <div class="text-xl font-bold tracking-tighter">DULALIA</div>
 
-        <!-- Desktop Links -->
-        <div class="hidden lg:flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
-            <a href="#about" class="hover:opacity-50 transition">About</a>
-            <a href="#projects" class="hover:opacity-50 transition">Projects</a>
-            <a href="#skills" class="hover:opacity-50 transition">Skills</a>
-            <a href="#education" class="hover:opacity-50 transition">Education</a>
-            <a href="#contact" class="hover:opacity-50 transition">Contact</a>
-        </div>
+    <!-- Desktop Links -->
+    <div class="hidden lg:flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+        <a href="#about" class="hover:opacity-50 transition">About</a>
+        <a href="#projects" class="hover:opacity-50 transition">Projects</a>
+        <a href="#skills" class="hover:opacity-50 transition">Skills</a>
+        <a href="#education" class="hover:opacity-50 transition">Education</a>
+        <a href="#contact" class="hover:opacity-50 transition">Contact</a>
+    </div>
 
-        <div class="flex items-center gap-6">
-
-            <!-- Hamburger only visible on mobile/tablet -->
-            <button id="menu-toggle" class="lg:hidden block">
-                <i data-lucide="menu" class="w-6 h-6 cursor-pointer"></i>
-            </button>
-        </div>
-    </nav>
-
-
-    <!-- Full Screen Mobile Menu Overlay -->
-    <!-- Full Screen Mobile Menu -->
-    <div id="mobile-menu"
-        class="fixed inset-0 bg-white z-[150] flex flex-col items-center justify-center gap-10 text-xl font-bold uppercase tracking-[0.3em] lg:hidden">
-        <!-- Close Button -->
-        <button onclick="toggleMenu()" class="absolute top-6 right-6">
-            <i data-lucide="x" class="w-8 h-8 text-black"></i>
+    <!-- Mobile Toggle -->
+    <div class="flex items-center">
+        <button id="menu-toggle" class="lg:hidden block p-2">
+            <i data-lucide="menu" class="w-6 h-6 cursor-pointer"></i>
         </button>
-
-        <!-- Links -->
-        <a href="#about" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">About</a>
-        <a href="#projects" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Projects</a>
-        <a href="#skills" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Skills</a>
-        <a href="#education" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Education</a>
-        <a href="#contact" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Contact</a>
     </div>
+</nav>
 
-    <!-- Socials -->
+<!-- Full Screen Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[150] flex flex-col items-center justify-center gap-10 text-xl font-bold uppercase tracking-[0.3em] lg:hidden">
+    <!-- Close Button -->
+    <button onclick="toggleMenu()" class="absolute top-6 right-6 p-2">
+        <i data-lucide="x" class="w-8 h-8 text-black"></i>
+    </button>
+
+    <!-- Links -->
+    <a href="#about" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">About</a>
+    <a href="#projects" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Projects</a>
+    <a href="#skills" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Skills</a>
+    <a href="#education" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Education</a>
+    <a href="#contact" class="text-black hover:opacity-50 transition" onclick="toggleMenu()">Contact</a>
+
+    <!-- Socials moved INSIDE the mobile menu so they don't cause overflow on the main page -->
     <div class="flex gap-8 mt-10 text-gray-400">
-        <i data-lucide="mail" class="w-5 h-5"></i>
-        <i data-lucide="instagram" class="w-5 h-5"></i>
-        <i data-lucide="facebook" class="w-5 h-5"></i>
+        <i data-lucide="mail" class="w-6 h-6"></i>
+        <i data-lucide="instagram" class="w-6 h-6"></i>
+        <i data-lucide="facebook" class="w-6 h-6"></i>
     </div>
-    </div>
+</div>
 
+<!-- The HERO SECTION starts immediately here -->
+<section class="min-h-screen pt-32 pb-14 px-6 md:px-10 flex items-center" id="about">
 
-
-
-
-    <!-- HERO SECTION -->
-    <section class="min-h-screen pt-30 pb-14 px-6 md:px-10 flex items-center" id="about">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
 
             <!-- LEFT CONTENT -->
@@ -149,10 +140,11 @@
                 <!-- OVERLAP CARD -->
                 <div class="bg-gray-200 p-8 md:p-10 max-w-md relative md:ml-14 -mt-4 shadow-sm">
                     <p class="text-gray-500 text-xs leading-relaxed mb-6">
-                        I am a fourth-year Information Technology student at Saint Anthony’s College with an interest in
-                        design and user experience. I am currently seeking my purpose and the path where I truly belong,
-                        exploring how technical problem-solving can work together with human-centered design. My work
-                        focuses on creating digital solutions that are easy to use, effective, and meaningful to people.
+                        I am a fourth-year Information Technology student at Saint Anthony’s College with a growing
+                        interest in web and graphic design. I am currently seeking my purpose
+                        and exploring the path where my skills truly belong. My focus is on understanding how technical
+                        problem-solving can work hand in hand with human-centered design. Through my work, I aim to
+                        create digital solutions that are simple to use, effective, and meaningful to people.
                     </p>
 
                     <div class="flex gap-5 text-gray-400">
@@ -223,8 +215,7 @@
                 <div>
                     <h2 class="text-4xl font-bold mb-3 tracking-tighter">Projects</h2>
                     <p class="text-gray-500 text-sm leading-relaxed max-w-full md:max-w-xl lg:max-w-2xl">
-                        Academic projects completed during the year, showcasing my growth in applying clean code
-                        principles and user-centered interface design to real-world scenarios.
+                        Academic projects completed during the year.
                     </p>
 
                 </div>
@@ -248,7 +239,8 @@
                         <div class="flex gap-3">
                             <span class="text-2xl font-serif italic text-gray-200">01</span>
                             <div>
-                                <h3 class="text-base font-bold mb-1 leading-tight">Smart Heatmap-Based Malnutrition Monitoring System
+                                <h3 class="text-base font-bold mb-1 leading-tight">Smart Heatmap-Based Malnutrition
+                                    Monitoring System
                                 </h3>
                                 <p class="text-gray-400 text-xs mb-3">2025 | Capstone Project</p>
                                 <!-- TECH LOGOS (FULL COLOR) -->
@@ -257,11 +249,12 @@
                                         title="Tailwind CSS">
                                     <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4" title="HTML5">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    class="w-4 h-4" alt="CSS">
+                                        class="w-4 h-4" alt="CSS">
                                     <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/flask/000" class="w-4 h-4" title="Flask">
                                     <img src="https://cdn.simpleicons.org/python" class="w-4 h-4" title="Python">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-4 h-4 transition-transform group-hover/item:scale-110" alt="Firebase">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                        class="w-4 h-4 transition-transform group-hover/item:scale-110" alt="Firebase">
                                 </div>
                             </div>
                         </div>
@@ -282,7 +275,7 @@
                                     <img src="https://cdn.simpleicons.org/tailwindcss" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    class="w-4 h-4" alt="CSS">
+                                        class="w-4 h-4" alt="CSS">
                                     <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/infinityfree" class="w-4 h-4"
                                         title="Hosted on InfinityFree">
@@ -306,7 +299,7 @@
                                     <img src="https://cdn.simpleicons.org/tailwindcss" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    class="w-4 h-4" alt="CSS">
+                                        class="w-4 h-4" alt="CSS">
                                     <img src="https://cdn.simpleicons.org/php" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/infinityfree" class="w-4 h-4"
@@ -330,7 +323,7 @@
                                 <div class="flex gap-3">
                                     <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    class="w-4 h-4" alt="CSS">
+                                        class="w-4 h-4" alt="CSS">
                                     <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/bootstrap" class="w-4 h-4">
                                     <img src="https://cdn.simpleicons.org/php" class="w-4 h-4">
@@ -359,11 +352,11 @@
                                     <div class="flex gap-3">
                                         <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                        class="w-4 h-4" alt="CSS">
+                                            class="w-4 h-4" alt="CSS">
                                         <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                         <img src="https://cdn.simpleicons.org/bootstrap" class="w-4 h-4">
                                         <img src="https://cdn.simpleicons.org/php" class="w-4 h-4">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +374,9 @@
                                     <p class="text-gray-400 text-xs mb-3">2025 | CC 106 Project</p>
                                     <div class="flex gap-3">
                                         <img src="https://cdn.simpleicons.org/androidstudio" class="w-4 h-4">
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-4 h-4 transition-transform group-hover/item:scale-110" alt="Firebase">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                            class="w-4 h-4 transition-transform group-hover/item:scale-110"
+                                            alt="Firebase">
                                     </div>
                                 </div>
                             </div>
@@ -400,7 +395,7 @@
                                     <div class="flex gap-3">
                                         <img src="https://cdn.simpleicons.org/html5" class="w-4 h-4">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                        class="w-4 h-4" alt="CSS">
+                                            class="w-4 h-4" alt="CSS">
                                         <img src="https://cdn.simpleicons.org/tailwindcss" class="w-4 h-4">
                                         <img src="https://cdn.simpleicons.org/javascript" class="w-4 h-4">
                                         <img src="https://cdn.simpleicons.org/php" class="w-4 h-4">
@@ -460,118 +455,162 @@
     </section>
 
     <!-- TECH STACK SECTION -->
-<section class="pt-10 pb-32 px-6 md:px-12" id="skills">
-    <div class="max-w-7xl mx-auto">
-        <!-- Label & Title -->
-        <div class="mb-20" data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-[1px] bg-black"></div>
-                <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-black">Skills & Technologies</span>
+    <section class="pt-10 pb-32 px-6 md:px-12" id="skills">
+        <div class="max-w-7xl mx-auto">
+            <!-- Label & Title -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-[1px] bg-black"></div>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-black">Skills &
+                        Technologies</span>
+                </div>
+                <h2 class="text-5xl md:text-7xl font-bold tracking-tighter">My Stack</h2>
             </div>
-            <h2 class="text-5xl md:text-7xl font-bold tracking-tighter">My Stack</h2>
+
+            <!-- The Minimalist Grid - 4 Columns with Rounded Black Containers -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- 01 DESIGN -->
+                <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
+                        <h3
+                            class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
+                            01 / Design</h3>
+                        <i data-lucide="layers"
+                            class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Figma</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Figma">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Photoshop</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Photoshop">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Canva</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Canva">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 02 FRONTEND -->
+                <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
+                        <h3
+                            class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
+                            02 / Frontend</h3>
+                        <i data-lucide="code-2"
+                            class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Tailwind
+                                CSS</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Tailwind">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Bootstrap</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Bootstrap">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">HTML
+                                & CSS</span>
+                            <div class="flex gap-1">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    class="w-4 h-4" alt="HTML">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    class="w-4 h-4" alt="CSS">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 03 BACKEND -->
+                <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
+                        <h3
+                            class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
+                            03 / Backend</h3>
+                        <i data-lucide="terminal"
+                            class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">PHP</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                class="w-6 h-6 transition-transform group-hover/item:scale-110" alt="PHP">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Python</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Python">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">JavaScript</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="w-5 h-5 rounded transition-transform group-hover/item:scale-110" alt="JS">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 04 DATABASE & TOOLS -->
+                <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
+                        <h3
+                            class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
+                            04 / Database & Tools</h3>
+                        <i data-lucide="database"
+                            class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">MySQL</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                class="w-6 h-6 transition-transform group-hover/item:scale-110" alt="MySQL">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span
+                                class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Firebase</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Firebase">
+                        </li>
+                        <li class="flex items-center justify-between group/item">
+                            <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">VS
+                                Code</span>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="VS Code">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-
-        <!-- The Minimalist Grid - 4 Columns with Rounded Black Containers -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <!-- 01 DESIGN -->
-            <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
-                    <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
-                        01 / Design</h3>
-                    <i data-lucide="layers" class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
-                </div>
-                <ul class="space-y-6">
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Figma</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Figma">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Photoshop</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Photoshop">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Canva</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Canva">
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 02 FRONTEND -->
-            <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
-                    <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
-                        02 / Frontend</h3>
-                    <i data-lucide="code-2" class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
-                </div>
-                <ul class="space-y-6">
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Tailwind CSS</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Tailwind">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Bootstrap</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Bootstrap">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">HTML & CSS</span>
-                        <div class="flex gap-1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-4 h-4" alt="HTML">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-4 h-4" alt="CSS">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 03 BACKEND -->
-            <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
-                <div class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
-                    <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
-                        03 / Backend</h3>
-                    <i data-lucide="terminal" class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
-                </div>
-                <ul class="space-y-6">
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">PHP</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-6 h-6 transition-transform group-hover/item:scale-110" alt="PHP">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Python</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Python">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">JavaScript</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5 rounded transition-transform group-hover/item:scale-110" alt="JS">
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 04 DATABASE & TOOLS -->
-            <div class="group p-8 border border-black rounded-2xl hover:bg-black transition-all duration-500" data-aos="fade-up" data-aos-delay="400">
-                <div class="pb-6 border-b border-gray-100 group-hover:border-gray-800 mb-8 flex justify-between items-end">
-                    <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-gray-400 group-hover:text-white transition-colors">
-                        04 / Database & Tools</h3>
-                    <i data-lucide="database" class="w-4 h-4 text-gray-200 group-hover:text-white transition-colors"></i>
-                </div>
-                <ul class="space-y-6">
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">MySQL</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6 transition-transform group-hover/item:scale-110" alt="MySQL">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">Firebase</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="Firebase">
-                    </li>
-                    <li class="flex items-center justify-between group/item">
-                        <span class="text-lg font-medium tracking-tight group-hover:text-white transition-colors">VS Code</span>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-5 h-5 transition-transform group-hover/item:scale-110" alt="VS Code">
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- DARK SECTION: EDUCATION & LIFESTYLE -->
@@ -627,7 +666,8 @@
                         <div class="bg-[#181818] p-6 rounded-[30px]">
                             <span class="text-2xl mb-3 block">📷</span>
                             <h5 class="font-bold text-sm mb-1">Photography</h5>
-                            <p class="text-[9px] text-gray-500 uppercase tracking-widest">Urban/Rural landscapes & Sunset</p>
+                            <p class="text-[9px] text-gray-500 uppercase tracking-widest">Urban/Rural landscapes &
+                                Sunset</p>
                         </div>
                         <div class="bg-[#181818] p-6 rounded-[30px]">
                             <span class="text-2xl mb-3 block">🎮</span>
@@ -663,114 +703,131 @@
         </div>
     </section>
 
-<!-- FOOTER -->
-<footer class="pt-32 pb-12 px-6 md:px-12 border-t border-gray-100 bg-white" id="contact">
-    <div class="max-w-7xl mx-auto">
+    <!-- FOOTER -->
+    <footer class="pt-32 pb-12 px-6 md:px-12 border-t border-gray-100 bg-white" id="contact">
+        <div class="max-w-7xl mx-auto">
 
-        <!-- Main Content Row -->
-        <div class="flex flex-col lg:flex-row items-start justify-between mb-24">
+            <!-- Main Content Row -->
+            <div class="flex flex-col lg:flex-row items-start justify-between mb-24">
 
-            <!-- Left Column: Branding & Action -->
-            <div class="lg:w-[45%] flex flex-col justify-between h-full" data-aos="fade-up">
-                <div>
-                    <h2 class="text-7xl md:text-8xl font-bold leading-[0.85] tracking-tighter text-black mb-12">
-                        Let's craft<br>
-                        <span class="text-gray-200">tomorrow.</span>
-                    </h2>
+                <!-- Left Column: Branding & Action -->
+                <div class="lg:w-[45%] flex flex-col justify-between h-full" data-aos="fade-up">
+                    <div>
+                        <h2 class="text-7xl md:text-8xl font-bold leading-[0.85] tracking-tighter text-black mb-12">
+                            Let's craft<br>
+                            <span class="text-gray-200">tomorrow.</span>
+                        </h2>
 
-                    <!-- UPDATED DOWNLOAD LINK -->
-                    <a href="Mian's Resume (1).pdf" 
-                       download="MaryAnn_Dulalia_Resume.pdf"
-                       class="inline-block group relative overflow-hidden border border-gray-300 px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:text-white transition-colors duration-500">
-                        <span class="relative z-10">Download Resume</span>
-                        <div class="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                    </a>
+                        <!-- UPDATED DOWNLOAD LINK -->
+                        <a href="Mian's Resume (1).pdf" download="MaryAnn_Dulalia_Resume.pdf"
+                            class="inline-block group relative overflow-hidden border border-gray-300 px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:text-white transition-colors duration-500">
+                            <span class="relative z-10">Download Resume</span>
+                            <div
+                                class="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vertical Divider (Desktop Only) -->
+                <div class="hidden lg:block w-px bg-gray-100 self-stretch mx-16"></div>
+
+                <!-- Right Column: Contact List -->
+                <div class="w-full lg:w-[45%] mt-16 lg:mt-0">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] block mb-8"
+                            data-aos="fade-left">
+                            Direct Contact
+                        </span>
+
+                        <div class="flex flex-col gap-4">
+                            <!-- Email Box -->
+                            <a href="mailto:dulaliamaryann24@gmail.com"
+                                class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
+                                data-aos="fade-left" data-aos-delay="100">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
+                                        <img src="https://img.freepik.com/premium-vector/gmail-icon_1273375-1247.jpg?semt=ais_hybrid&w=740&q=80"
+                                            alt="Email"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Email</span>
+                                        <p class="text-[15px] font-medium tracking-tight text-gray-900">
+                                            dulaliamaryann24@gmail.com</p>
+                                    </div>
+                                </div>
+                                <i data-lucide="arrow-right"
+                                    class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
+                            </a>
+
+                            <!-- Instagram Box -->
+                            <a href="https://www.instagram.com/mry_aenn" target="_blank"
+                                class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
+                                data-aos="fade-left" data-aos-delay="200">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
+                                        <img src="https://i.pinimg.com/736x/24/37/73/2437730f7e3a5705e205e67fa2cd1020.jpg"
+                                            alt="Instagram"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Instagram</span>
+                                        <p class="text-[15px] font-medium tracking-tight text-gray-900">@mry_aenn</p>
+                                    </div>
+                                </div>
+                                <i data-lucide="arrow-right"
+                                    class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
+                            </a>
+
+                            <!-- Facebook Box -->
+                            <a href="https://www.facebook.com/maryann.dulalia.9" target="_blank"
+                                class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
+                                data-aos="fade-left" data-aos-delay="300">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
+                                        <img src="https://img.freepik.com/premium-vector/facebook-logo-vector-facebook-official-logo-vector-facebook-logo-illustrator_1002350-1803.jpg?semt=ais_hybrid&w=740&q=80"
+                                            alt="Facebook"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Facebook</span>
+                                        <p class="text-[15px] font-medium tracking-tight text-gray-900">Mary Ann Dulalia
+                                        </p>
+                                    </div>
+                                </div>
+                                <i data-lucide="arrow-right"
+                                    class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Vertical Divider (Desktop Only) -->
-            <div class="hidden lg:block w-px bg-gray-100 self-stretch mx-16"></div>
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                    <span class="text-black">SAC</span>
+                    <span>© 2026 Mary Ann P. Dulalia</span>
+                </div>
 
-            <!-- Right Column: Contact List -->
-            <div class="w-full lg:w-[45%] mt-16 lg:mt-0">
-                <div class="flex flex-col">
-                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] block mb-8" data-aos="fade-left">
-                        Direct Contact
-                    </span>
-
-                    <div class="flex flex-col gap-4">
-                        <!-- Email Box -->
-                        <a href="mailto:dulaliamaryann24@gmail.com"
-                            class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
-                            data-aos="fade-left" data-aos-delay="100">
-                            <div class="flex items-center gap-5">
-                                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
-                                    <img src="https://img.freepik.com/premium-vector/gmail-icon_1273375-1247.jpg?semt=ais_hybrid&w=740&q=80"
-                                        alt="Email" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div>
-                                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Email</span>
-                                    <p class="text-[15px] font-medium tracking-tight text-gray-900">dulaliamaryann24@gmail.com</p>
-                                </div>
-                            </div>
-                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
-                        </a>
-
-                        <!-- Instagram Box -->
-                        <a href="https://www.instagram.com/mry_aenn" target="_blank"
-                            class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
-                            data-aos="fade-left" data-aos-delay="200">
-                            <div class="flex items-center gap-5">
-                                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
-                                    <img src="https://i.pinimg.com/736x/24/37/73/2437730f7e3a5705e205e67fa2cd1020.jpg"
-                                        alt="Instagram" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div>
-                                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Instagram</span>
-                                    <p class="text-[15px] font-medium tracking-tight text-gray-900">@mry_aenn</p>
-                                </div>
-                            </div>
-                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
-                        </a>
-
-                        <!-- Facebook Box -->
-                        <a href="https://www.facebook.com/maryann.dulalia.9" target="_blank"
-                            class="group border border-gray-100 rounded-2xl p-6 flex items-center justify-between hover:border-black hover:shadow-sm transition-all duration-300"
-                            data-aos="fade-left" data-aos-delay="300">
-                            <div class="flex items-center gap-5">
-                                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center overflow-hidden">
-                                    <img src="https://img.freepik.com/premium-vector/facebook-logo-vector-facebook-official-logo-vector-facebook-logo-illustrator_1002350-1803.jpg?semt=ais_hybrid&w=740&q=80"
-                                        alt="Facebook" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                                </div>
-                                <div>
-                                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Facebook</span>
-                                    <p class="text-[15px] font-medium tracking-tight text-gray-900">Mary Ann Dulalia</p>
-                                </div>
-                            </div>
-                            <i data-lucide="arrow-right" class="w-4 h-4 text-gray-200 group-hover:text-black group-hover:translate-x-1 transition-all"></i>
-                        </a>
+                <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+                    <a href="https://github.com/Mi-an11" target="_blank"
+                        class="text-gray-400 hover:text-black transition-colors">Github</a>
+                    <div class="flex items-center gap-2.5 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-[9px] text-gray-600">Available for internships</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Bottom Copyright Bar -->
-        <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                <span class="text-black">SAC</span>
-                <span>© 2026 Mary Ann P. Dulalia</span>
-            </div>
-
-            <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <a href="https://github.com/Mi-an11" target="_blank" class="text-gray-400 hover:text-black transition-colors">Github</a>
-                <div class="flex items-center gap-2.5 bg-gray-50 px-4 py-2 rounded-full border border-gray-100">
-                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-[9px] text-gray-600">Available for internships</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
     <!-- BACK TO TOP BUTTON -->
     <div id="backToTop" onclick="scrollToTop()"
         class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-14 h-14 md:w-16 md:h-16 bg-black text-white rounded-full flex items-center justify-center shadow-xl cursor-pointer hover:scale-110 transition z-50 opacity-0 invisible translate-y-4 duration-500">
